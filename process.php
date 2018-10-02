@@ -8,28 +8,30 @@
 
     if (!empty($_GET)) {
         #Get the data
-        $repetitions = $_GET['repetitions'];
         $type = $_GET['type'];
+        $repetitions = $_GET['repetitions'];
         $guess = $_GET['guess'];
 
         #Instantiate new Calculate object
 
         $calc = new Calculate($type);
 
-        echo ($calc->calculate($repetitions));
-        die();
-
-        $percentage = ($calc->calculate($repetitions))/$repetitions;
+        $num_correct = $calc->calculate($repetitions);
+        $percentage = ($num_correct/$repetitions) * 100;
 
         $_SESSION['results'] =
         [
-            'percentage' => $percentage,
             'type' => $type,
             'repetitions' => $repetitions,
-            'guess' => $guess
+            'guess' => $guess,
+            'num_correct' => $num_correct,
+            'percentage' => $percentage,
         ];
 
-        header('Location: answerpage.php');
+        dump($_SESSION['results']);
+        die();
+
+        header('Location: index.php');
     }
 
 

@@ -1,5 +1,6 @@
 <?php
 require 'helpers.php';
+require 'logic.php';
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,9 @@ require 'helpers.php';
     You are given the choice of three doors, one of which has a prize behind it.<br>
     You have already chosen Door 1, but there's a twist.<br>
     The game show host tells you Door 3 does not have a prize behind it and gives you the option to change your choice.<br>
+    Do you have a better chance choosing the prize door by changing your choice, or staying?<br>
+    What if you are given the same choice many times?<br>
+    How many times do you think you'd choose the prize door making the same choice?
 </p>
 
 <form method='GET' action='process.php'>
@@ -39,8 +43,7 @@ require 'helpers.php';
     </fieldset>
 
     <p>
-        What if you made if you are given the same choice 50 or 100 times?<br>
-        What percentage of the time do you think you'd make the same choice and choose the prize door?
+
     </p>
 
     <label>Choose how many times to repeat this same choice:</label><br>
@@ -61,6 +64,9 @@ require 'helpers.php';
     <br><br>
     <input type='submit' value='Submit'>
 </form>
+
+
+
 
 </body>
 </html>
