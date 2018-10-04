@@ -1,0 +1,56 @@
+/* box sizing: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* http://snook.ca/archives/html_and_css/font-size-with-rem */
+    color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* sticky footer */
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Default font-size */
+    font-size: 1.6rem;
+
+    /* sticky footer - match footer height */
+    margin-bottom: 60px;
+}
+
+
+.container {
+    width:50%;
+    min-width:600px;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.col-15 {
+    float: left;
+    margin-left: 15px;
+    margin-top: 6px;
+    width: 300px;
+}
+
+p {
+    text-align: left;
+}
+
+.col-50 {
+    float: left;
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

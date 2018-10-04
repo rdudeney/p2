@@ -1,37 +1,48 @@
 <?php
     require 'Calculate.php';
     require 'helpers.php';
+    require 'Form.php';
 
     use P2\Calculate;
+    use DWA\Form;
 
     session_start();
 
-    if (!empty($_GET)) {
-        #Get the data
-        $type = $_GET['type'];
-        $repetitions = $_GET['repetitions'];
-        $guess = $_GET['guess'];
+    # Instantiate new Form object
+    $form = new Form($_GET);
 
-        #Instantiate new Calculate object
+    #Get the data
+    $type = $form->get('type');
+    $repetitions = $form->get('repetitions');
+    $guess = $form->get('guess');
 
+    $errors = $form->validate([
+        'type' => 'required',
+        'repetitions' => 'required',
+        'guess' => 'required|digit|minLength:1|maxLength:3'
+    ]);
+
+    if (!$form->hasErrors)
+    {
+        # Instantiate new Calculate object
         $calc = new Calculate($type);
 
         $num_correct = $calc->calculate($repetitions);
-        $percentage = ($num_correct/$repetitions) * 100;
-
-        $_SESSION['results'] =
-        [
-            'type' => $type,
-            'repetitions' => $repetitions,
-            'guess' => $guess,
-            'num_correct' => $num_correct,
-            'percentage' => $percentage,
-        ];
-
-        dump($_SESSION['results']);
-        die();
-
-        header('Location: index.php');
+        $percentage = ($num_correct / $repetitions) * 100;
     }
+
+    $_SESSION['results'] =
+    [
+        'errors' => $errors,
+        'hasErrors' => $form->hasErrors,
+        'type' => $type,
+        'repetitions' => $repetitions,
+        'guess' => $guess,
+        'num_correct' => $num_correct,
+        'percentage' => $percentage,
+    ];
+
+    header('Location: index.php');
+
 
 
