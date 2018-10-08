@@ -1,1 +1,0 @@
-/* Receives and displays the percentages from the logic page */

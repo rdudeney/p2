@@ -25,6 +25,28 @@ class Calculate
         return $this->process($input);
     }
 
+    /**
+     * @param $guess
+     * @param $repetitions
+     * @return string
+     */
+    public function respond($guess, $num_correct)
+    {
+        $difference = abs($num_correct - $guess);
+
+        if ($difference < 10)
+        {
+            $response = "Great guess!";
+            return $response;
+        } elseif ($difference >= 10 and $difference < 50 ){
+            $response = "Very close!";
+            return $response;
+        }
+
+        $response = "You'll get it next time!";
+        return $response;
+    }
+
     private function process($input)
     {
         $matching = 0;

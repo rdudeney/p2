@@ -113,10 +113,19 @@ require 'logic.php';
             </div>
 
         <?php else: ?>
-            <?php if(isset($results)): ?>
-                <br>By making the choice to <?= $type ?> you would have chosen the prize door <strong></strong> out of <strong><?= $repetitions ?></strong> chances or <strong><?= $percentage ?>%</strong>.
-                                                                                                                                     You guessed <strong></strong>.
-                Try changing your choices and see what results you get!
+            <?php if (isset($results)): ?>
+                <div class='alert alert-success' role='alert'>
+                    By making the choice to <strong><?= $type ?></strong> you would have chosen the prize door
+                    <strong><?= $num_correct ?></strong> out of <strong><?= $repetitions ?></strong> chances or
+                    <strong><?= $percentage ?>%</strong>.
+                </div>
+                <div class='alert alert-primary' role='alert'>
+                    You guessed <strong><?= $guess ?></strong>. <?= $response ?>
+                </div>
+                <div class='alert alert-warning' role='alert'>
+                    Try changing your choices and see what results you get! To learn more about the Monty Hall
+                    problem click <a target='_blank' href='https://en.wikipedia.org/wiki/Monty_Hall_problem'>here</a>.
+                </div>
             <?php endif ?>
         <?php endif ?>
     </form>

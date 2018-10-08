@@ -19,7 +19,7 @@
     $errors = $form->validate([
         'type' => 'required',
         'repetitions' => 'required|digit',
-        'guess' => 'required|digit|minLength:1|maxLength:3'
+        'guess' => 'required|digit|minLength:1|maxLength:4'
     ]);
 
     if (!$form->hasErrors)
@@ -29,6 +29,7 @@
 
         $num_correct = $calc->calculate($repetitions);
         $percentage = ($num_correct / $repetitions) * 100;
+        $response = $calc->respond($guess, $num_correct);
     }
 
     $_SESSION['results'] =
@@ -40,6 +41,7 @@
         'guess' => $guess,
         'num_correct' => $num_correct,
         'percentage' => $percentage,
+        'response' => $response,
     ];
 
     header('Location: index.php');
