@@ -18,7 +18,7 @@
 
     $errors = $form->validate([
         'type' => 'required',
-        'repetitions' => 'required',
+        'repetitions' => 'required|digit',
         'guess' => 'required|digit|minLength:1|maxLength:3'
     ]);
 

@@ -23,34 +23,29 @@ body {
     margin-bottom: 60px;
 }
 
+table {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 .container {
     width:50%;
     min-width:600px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
 .col-15 {
     float: left;
     margin-left: 15px;
-    margin-top: 6px;
     width: 300px;
 }
 
-p {
-    text-align: left;
-}
-
-.col-50 {
-    float: left;
-    margin-left: 15px;
-    margin-top: 6px;
-}
-
 .row:after {
-    content: "";
     display: table;
-    clear: both;
+}
+
+.submit {
+    margin-bottom: 6px;
 }
 
