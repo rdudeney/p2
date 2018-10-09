@@ -18,5 +18,6 @@ if (isset($_SESSION['results'])) {
     extract($results);
 }
 
+# Clear session data
 session_unset();
 
