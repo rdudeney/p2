@@ -15,7 +15,7 @@ require 'logic.php';
           integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
           crossorigin='anonymous'>
 
-    <link href='style\app.css' rel='stylesheet'>
+    <link href='/style/app.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -26,9 +26,9 @@ require 'logic.php';
     <table>
         <thead>
         <tr>
-            <td><img src='images/door.png'></td>
-            <td><img src='images/door.png'></td>
-            <td><img src='images/door.png'></td>
+            <td><img src='images/door.png' alt='Door 1'></td>
+            <td><img src='images/door.png' alt='Door 2'></td>
+            <td><img src='images/door.png' alt='Door 3'></td>
         </tr>
 
         </thead>
@@ -74,6 +74,7 @@ require 'logic.php';
                                value='stay' <?php if (isset($type) and $type == 'stay') echo 'checked' ?>> Stay
                     </label>
                 </div>
+             </div>
         </fieldset>
 
         <div class='row'>
