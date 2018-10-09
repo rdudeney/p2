@@ -15,7 +15,7 @@ require 'logic.php';
           integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
           crossorigin='anonymous'>
 
-    <link href='app.css' rel='stylesheet'>
+    <link href='style\app.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -93,14 +93,14 @@ require 'logic.php';
 
         <div class='row'>
             <div class='col-15'>
-                <label>Guess how many times the same choice would be right:</label>
+                <label>Guess how many times the same choice would be right, any number 1 - 999:</label>
             </div>
             <div class='col-15'>
                 <input type='text' name='guess' size='4' value='<?= $guess ?? ' ' ?>'>
             </div>
         </div>
 
-        <input type='submit' class='submit' value='Submit'>
+        <input type='submit' class='submit' value='Get Answer'>
 
         <?php if ($hasErrors): ?>
             <div class='alert alert-danger'>
@@ -116,7 +116,7 @@ require 'logic.php';
             <?php if (isset($results)): ?>
                 <div class='alert alert-success' role='alert'>
                     By making the choice to <strong><?= $type ?></strong> you would have chosen the prize door
-                    <strong><?= $num_correct ?></strong> out of <strong><?= $repetitions ?></strong> chances or
+                    <strong><?= $num_correct ?></strong> times out of <strong><?= $repetitions ?></strong> chances, or
                     <strong><?= $percentage ?>%</strong>.
                 </div>
                 <div class='alert alert-primary' role='alert'>

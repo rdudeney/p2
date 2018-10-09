@@ -10,6 +10,7 @@ class Calculate
      */
 
      private $type; # Parameter confirms whether to change or stay
+     private $TOTAL = 6; # Total of all door values
 
      /*
       * Magic method
@@ -52,10 +53,9 @@ class Calculate
         $matching = 0;
 
         for ($i=0; $i < $input; $i++) {
-            $total = 6;
             $choice = rand(1, 3);
             $other1 = $this->setDoor($choice);
-            $other2 = $total - ($choice + $other1);
+            $other2 = $this->TOTAL - ($choice + $other1);
             $correct = rand(1, 3);
 
             $matching += $this->match($correct, $other1, $other2);
@@ -84,16 +84,13 @@ class Calculate
         {
             if ($other1 == $correct || $other2 == $correct)
             {
-
                 return 1;
             } else {
-
                 return 0;
             }
         } else {
             if ($other1 == $correct || $other2 == $correct)
             {
-
                 return 0;
             }
         }
