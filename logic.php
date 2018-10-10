@@ -6,7 +6,6 @@
  * to be displayed in index.php
  */
 
-
 session_start();
 
 $hasErrors = false;
