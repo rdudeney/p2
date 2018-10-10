@@ -13,7 +13,7 @@
 
 
 ## 3 Unique inputsi
-(1) Radio button to either change doors, or stay with current door (2) Dropdown Menu to set the number of times to repeat the same choice. (3) Text input to confirm user guess of number of prize doors, which is compared to actual prize door and returns a response
+(1) Radio button to either change doors, or stay with current door (2) Dropdown Menu to set the number of times to repeat the same choice. (3) Text input to confirm user guess of number of prize doors, which is compared to actual prize doors and returns a response
 
 ## Class
 Form.php, Calculate.php
