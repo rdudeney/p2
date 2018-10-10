@@ -12,11 +12,11 @@
 [w3 Schools](http://php.net/manual/en/functions.user-defined.php) - Table design
 
 
-## 3 Unique inputs
+## 3 Unique inputsi
 (1) Radio button to either change doors, or stay with current door (2) Dropdown Menu to set the number of times to repeat the same choice. (3) Text input to confirm user guess of number of prize doors
 
 ## Class
-Form.php`, `Calculate.php
+Form.php, Calculate.php
 
 ## Code style divergences
 No divergences from PSR-1/PSR-2 and course guidelines on code style
