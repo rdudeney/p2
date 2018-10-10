@@ -74,7 +74,7 @@ require 'logic.php';
                                value='stay' <?php if (isset($type) and $type == 'stay') echo 'checked' ?>> Stay
                     </label>
                 </div>
-             </div>
+            </div>
         </fieldset>
 
         <div class='row'>
