@@ -46,8 +46,8 @@ require 'logic.php';
         You are given the choice of three doors, one of which has a prize behind it.
         You have already chosen Door 1, but there's a twist.
         The game show host tells you Door 3 does not have a prize behind it and gives you the option to change your choice.
-        Do you have a better chance choosing the prize door by changing your choice, or staying?
-        What if you are given the same choice many times?
+        Do you have a better chance of choosing the prize door by changing your choice of doors, or staying?
+        What if you are given the same choice many times, with the prize switching doors at random each time?
         How many times do you think you'd choose the prize door making the same choice?
     </p>
 
